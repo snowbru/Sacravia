@@ -23,8 +23,7 @@
       prix: 180,
       devise: 'EUR',
       resume: "N.-D. de Grâces & St Joseph, prière et marche douce.",
-      img: './assets/voyages/cotignac.jpg',
-      dates: ['2025-04-12', '2025-05-24', '2025-10-04'],
+    img: 'https://images.unsplash.com/photo-1611936041227-e6d7e8d4f896?w=800',      dates: ['2025-04-12', '2025-05-24', '2025-10-04'],
       tags: ['Provence', 'Sanctuaire', 'Marche 6–10 km']
     },
     {
@@ -37,8 +36,7 @@
       prix: 160,
       devise: 'EUR',
       resume: "Grotte Ste‑Marie‑Madeleine, forêt relique et crête.",
-      img: './assets/voyages/sainte-baume.jpg',
-      dates: ['2025-03-29', '2025-05-17', '2025-09-20'],
+    img: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800',      dates: ['2025-03-29', '2025-05-17', '2025-09-20'],
       tags: ['Var', 'Grotte', 'Forêt']
     },
     {
@@ -51,8 +49,7 @@
       prix: 260,
       devise: 'EUR',
       resume: "Sanctuaire alpin, liturgie simple, fraternité.",
-      img: './assets/voyages/laus.jpg',
-      dates: ['2025-06-14', '2025-09-13'],
+    img: 'https://images.unsplash.com/photo-1584700631091-e43dd2f73c70?w=800',      dates: ['2025-06-14', '2025-09-13'],
       tags: ['Alpes', 'Sanctuaire', 'Marche 8–12 km']
     },
     {
@@ -65,8 +62,7 @@
       prix: 320,
       devise: 'EUR',
       resume: "Ligurie de l'Ouest, chapelles mariales, sentiers côtiers.",
-      img: './assets/voyages/ligurie.jpg',
-      dates: ['2025-04-18', '2025-10-10'],
+    img: 'https://images.unsplash.com/photo-1513415564515-763d91423bdd?w=800',      dates: ['2025-04-18', '2025-10-10'],
       tags: ['Ligurie', 'Côte', 'Chapelles']
     },
   {
