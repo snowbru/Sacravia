@@ -1,31 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacravia – Chemins de foi, voies de lumière</title>
-    <meta property="og:image" content="assets/iterdei-logo-4.jpg">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Sacravia – Voyages & pèlerinages pour petits groupes</title>
+  <meta name="description" content="Organisation de séjours spirituels et pèlerinages pour petits groupes, en France et en Europe : prière, marche, fraternité. Demandez un devis personnalisé avec Sacravia.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#050b18; color:#f7f3ea; }
+    header, footer { background:#050814; padding:1.2rem 1.5rem; }
+    header nav a { color:#f7f3ea; text-decoration:none; margin-right:1rem; font-size:0.95rem; }
+    header nav a.active { font-weight:600; border-bottom:2px solid #e4c88c; padding-bottom:0.2rem; }
+    main { max-width:960px; margin:0 auto; padding:2.5rem 1.5rem 3rem; }
+    h1 { font-size:2.4rem; margin-bottom:0.4rem; letter-spacing:0.08em; text-transform:uppercase; }
+    h2 { margin-top:2rem; margin-bottom:0.75rem; font-size:1.4rem; }
+    p { line-height:1.6; margin:0.4rem 0; }
+    .tagline { font-size:1.1rem; color:#e4c88c; margin-bottom:1.2rem; }
+    .cta-row { margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.8rem; }
+    .btn-primary, .btn-secondary {
+      display:inline-block; padding:0.7rem 1.4rem; border-radius:999px; text-decoration:none;
+      font-weight:600; font-size:0.95rem;
+    }
+    .btn-primary { background:#e4c88c; color:#050814; }
+    .btn-secondary { border:1px solid #e4c88c; color:#e4c88c; }
+    .pill-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1rem; }
+    .pill {
+      background:#0b1224; border-radius:0.9rem; padding:1rem 1.2rem;
+      border:1px solid rgba(228,200,140,0.25); font-size:0.95rem;
+    }
+    .pill strong { display:block; margin-bottom:0.3rem; color:#fdf7e8; }
+    footer { font-size:0.8rem; color:#b9b5aa; text-align:center; }
+    a { color:#e4c88c; }
+    @media (max-width:600px) {
+      h1 { font-size:2rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="assets/logo site.png" alt="Logo Sacravia" width="80">
-        <h1>Sacravia</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="voyages.html">Voyages</a>
-            <a href="a-propos.html">À propos</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Chemins de foi, voies de lumière</h2>
-        <p>Des séjours fraternels et spirituels pour petits groupes, en France et en Europe.</p>
-    </main>
-    <footer>
-        <img src="assets/iterdei-logo-4.jpg" alt="Logo Sacravia" width="60">
-        <p>© 2025 Sacravia – Tous droits réservés</p>
-    </footer>
+  <header>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="voyages.html">Voyages</a>
+      <a href="apropos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="hero-title">
+      <h1 id="hero-title">Sacravia</h1>
+      <p class="tagline">Chemins de foi, voies de lumière.</p>
+      <p>
+        Nous organisons des séjours spirituels et des pèlerinages pour petits groupes, en France et en Europe.
+        Marcher, prier, rencontrer, se ressourcer&nbsp;: chaque itinéraire devient un chemin de lumière.
+      </p>
+
+      <div class="pill-grid" aria-label="Atouts principaux">
+        <article class="pill">
+          <strong>Petits groupes (2 à 6 personnes)</strong>
+          Une attention personnelle pour avancer ensemble, à votre rythme.
+        </article>
+        <article class="pill">
+          <strong>Expériences spirituelles &amp; fraternelles</strong>
+          Marche, prière, silence, visites, écoute et partage.
+        </article>
+        <article class="pill">
+          <strong>France &amp; Europe</strong>
+          Paray-le-Monial, Sainte-Baume, Ars, Assise, Rome…
+        </article>
+      </div>
+
+      <section aria-labelledby="pour-qui">
+        <h2 id="pour-qui">Pour qui&nbsp;?</h2>
+        <p>Sacravia s'adresse à&nbsp;:</p>
+        <ul>
+          <li>des amis ou de petites fraternités ;</li>
+          <li>des paroisses ou groupes de prière ;</li>
+          <li>des familles ;</li>
+          <li>des prêtres, diacres ou personnes consacrées ;</li>
+          <li>toute personne cherchant un temps de paix, de prière ou de conversion intérieure.</li>
+        </ul>
+      </section>
+
+      <div class="cta-row">
+        <a href="voyages.html" class="btn-primary">Découvrir nos voyages</a>
+        <a href="contact.html" class="btn-secondary">Demander un devis personnalisé</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Sacravia &mdash; Là où la route devient prière.
+  </footer>
 </body>
 </html>
