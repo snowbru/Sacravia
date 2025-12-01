@@ -113,6 +113,15 @@
       min-height:130px;
       resize:vertical;
     }
+        select {
+      width:100%;
+      padding:0.6rem 0.7rem;
+      border-radius:0.4rem;
+      border:1px solid #2b3350;
+      background:#0b1224;
+      color:#f7f3ea;
+      font:inherit;
+    }
     button {
       margin-top:1rem;
       padding:0.7rem 1.4rem;
@@ -164,16 +173,19 @@
       Utilisez ce formulaire pour une demande simple, un devis ou une proposition de voyage.
     </p>
 
-    <form action="mailto:ton-email@sacravia.fr" method="post" enctype="text/plain">
+    <form action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST">
       <label for="nom">Nom complet</label>
       <input id="nom" name="Nom" required />
 
       <label for="email">Adresse e-mail</label>
       <input id="email" name="Email" type="email" required />
 
-      <label for="sujet">Sujet</label>
-      <input id="sujet" name="Sujet" placeholder="Demande de devis, proposition de voyage..." />
-
+            <label for="type">Type de demande</label>
+      <select id="type" name="type">
+        <option value="devis">Demande de devis</option>
+        <option value="infos">Question générale</option>
+        <option value="projet-groupe">Projet de pèlerinage de groupe</option>
+      </select>
       <label for="message">Message</label>
       <textarea id="message" name="Message" required></textarea>
 
