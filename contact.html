@@ -6,36 +6,153 @@
   <meta name="description" content="Contactez Sacravia pour une demande de devis, un projet de pèlerinage ou toute question sur nos voyages spirituels pour petits groupes.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#050b18; color:#f7f3ea; }
-    header, footer { background:#050814; padding:1.2rem 1.5rem; }
-    header nav a { color:#f7f3ea; text-decoration:none; margin-right:1rem; font-size:0.95rem; }
-    header nav a.active { font-weight:600; border-bottom:2px solid #e4c88c; padding-bottom:0.2rem; }
-    main { max-width:960px; margin:0 auto; padding:2.5rem 1.5rem 3rem; }
-    h1 { font-size:2rem; margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.08em; }
-    h2 { margin-top:2rem; margin-bottom:0.75rem; font-size:1.3rem; }
-    p { line-height:1.6; margin:0.4rem 0; }
-    form { margin-top:1rem; max-width:520px; }
-    label { display:block; margin-top:0.8rem; margin-bottom:0.2rem; font-size:0.9rem; }
-    input, textarea {
-      width:100%; padding:0.6rem 0.7rem; border-radius:0.4rem; border:1px solid #2b3350;
-      background:#0b1224; color:#f7f3ea; font:inherit;
+    body {
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#050b18;
+      color:#f7f3ea;
     }
-    textarea { min-height:130px; resize:vertical; }
+
+    .site-header {
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+      padding:0.9rem 1.5rem;
+      background:linear-gradient(90deg,#050814,#09132a);
+      border-bottom:1px solid rgba(228,200,140,0.25);
+      position:sticky;
+      top:0;
+      z-index:20;
+    }
+    .brand a {
+      display:flex;
+      align-items:center;
+      gap:0.6rem;
+      text-decoration:none;
+    }
+    .brand img {
+      height:46px;
+      width:auto;
+      border-radius:12px;
+      box-shadow:0 0 12px rgba(0,0,0,0.5);
+    }
+    .brand-text {
+      font-weight:700;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      font-size:0.78rem;
+      color:#f7f3ea;
+      opacity:0.9;
+    }
+    .main-nav {
+      margin-left:auto;
+      display:flex;
+      gap:0.6rem;
+      flex-wrap:wrap;
+    }
+    .main-nav a {
+      color:#f7f3ea;
+      text-decoration:none;
+      font-size:0.9rem;
+      padding:0.45rem 0.85rem;
+      border-radius:999px;
+      border:1px solid transparent;
+      transition:background 0.18s ease,border-color 0.18s ease, color 0.18s ease;
+    }
+    .main-nav a:hover {
+      background:rgba(228,200,140,0.04);
+      border-color:rgba(228,200,140,0.45);
+    }
+    .main-nav a.active {
+      border-color:#e4c88c;
+      background:rgba(228,200,140,0.1);
+      color:#fdf7e8;
+      font-weight:600;
+    }
+
+    main {
+      max-width:960px;
+      margin:0 auto;
+      padding:2.5rem 1.5rem 3rem;
+    }
+    h1 {
+      font-size:2rem;
+      margin-bottom:0.4rem;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+    }
+    h2 {
+      margin-top:2rem;
+      margin-bottom:0.75rem;
+      font-size:1.3rem;
+    }
+    p {
+      line-height:1.6;
+      margin:0.4rem 0;
+    }
+    form {
+      margin-top:1rem;
+      max-width:520px;
+    }
+    label {
+      display:block;
+      margin-top:0.8rem;
+      margin-bottom:0.2rem;
+      font-size:0.9rem;
+    }
+    input, textarea {
+      width:100%;
+      padding:0.6rem 0.7rem;
+      border-radius:0.4rem;
+      border:1px solid #2b3350;
+      background:#0b1224;
+      color:#f7f3ea;
+      font:inherit;
+    }
+    textarea {
+      min-height:130px;
+      resize:vertical;
+    }
     button {
-      margin-top:1rem; padding:0.7rem 1.4rem; border-radius:999px; border:none;
-      background:#e4c88c; color:#050814; font-weight:600; font-size:0.95rem; cursor:pointer;
+      margin-top:1rem;
+      padding:0.7rem 1.4rem;
+      border-radius:999px;
+      border:none;
+      background:#e4c88c;
+      color:#050814;
+      font-weight:600;
+      font-size:0.95rem;
+      cursor:pointer;
     }
     button:hover { filter:brightness(1.05); }
-    footer { font-size:0.8rem; color:#b9b5aa; text-align:center; }
+    footer {
+      font-size:0.8rem;
+      color:#b9b5aa;
+      text-align:center;
+      padding:1.2rem 1.5rem;
+      border-top:1px solid rgba(228,200,140,0.18);
+      background:#050814;
+    }
     a { color:#e4c88c; }
+
+    @media (max-width:600px) {
+      .site-header { flex-wrap:wrap; justify-content:space-between; }
+      .brand-text { display:none; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/logo-site.png" alt="Logo Sacravia">
+        <span class="brand-text">SACRAVIA</span>
+      </a>
+    </div>
+    <nav class="main-nav">
       <a href="index.html">Accueil</a>
       <a href="voyages.html">Voyages</a>
-      <a href="a-propos.html">À propos</a>
+      <a href="apropos.html">À propos</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
