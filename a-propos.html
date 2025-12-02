@@ -2,27 +2,123 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>À propos de Sacravia – Chemins de foi</title>
-  <meta name="description" content="Sacravia organise des voyages spirituels et pèlerinages pour petits groupes. Découvrez la mission, la vision et l'histoire de Sacravia.">
+  <title>À propos de Sacravia</title>
+  <meta name="description" content="Qui sommes-nous? Sacravia propose des pèlerinages et séjours spirituels simples et profonds pour petits groupes.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <style>
-    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#050b18; color:#f7f3ea; }
-    header, footer { background:#050814; padding:1.2rem 1.5rem; }
-    header nav a { color:#f7f3ea; text-decoration:none; margin-right:1rem; font-size:0.95rem; }
-    header nav a.active { font-weight:600; border-bottom:2px solid #e4c88c; padding-bottom:0.2rem; }
-    main { max-width:960px; margin:0 auto; padding:2.5rem 1.5rem 3rem; }
-    h1 { font-size:2rem; margin-bottom:0.4rem; text-transform:uppercase; letter-spacing:0.08em; }
-    h2 { margin-top:2rem; margin-bottom:0.75rem; font-size:1.3rem; }
-    p { line-height:1.6; margin:0.4rem 0; }
-    ul { padding-left:1.2rem; }
-    .highlight { color:#e4c88c; }
-    footer { font-size:0.8rem; color:#b9b5aa; text-align:center; }
+    body {
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#050b18;
+      color:#f7f3ea;
+    }
+    .site-header {
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+      padding:0.9rem 1.5rem;
+      background:linear-gradient(90deg,#050814,#09132a);
+      border-bottom:1px solid rgba(228,200,140,0.25);
+      position:sticky;
+      top:0;
+      z-index:20;
+    }
+    .brand a {
+      display:flex;
+      align-items:center;
+      gap:0.6rem;
+      text-decoration:none;
+    }
+    .brand img {
+      height:46px;
+      width:auto;
+      border-radius:12px;
+      box-shadow:0 0 12px rgba(0,0,0,0.5);
+    }
+    .brand-text {
+      font-weight:700;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      font-size:0.78rem;
+      color:#f7f3ea;
+      opacity:0.9;
+    }
+    .main-nav {
+      margin-left:auto;
+      display:flex;
+      gap:0.6rem;
+      flex-wrap:wrap;
+    }
+    .main-nav a {
+      color:#f7f3ea;
+      text-decoration:none;
+      font-size:0.9rem;
+      padding:0.45rem 0.85rem;
+      border-radius:999px;
+      border:1px solid transparent;
+      transition:background 0.18s ease,border-color 0.18s ease,color 0.18s ease;
+    }
+    .main-nav a:hover {
+      background:rgba(228,200,140,0.04);
+      border-color:rgba(228,200,140,0.45);
+    }
+    .main-nav a.active {
+      border-color:#e4c88c;
+      background:rgba(228,200,140,0.1);
+      color:#fdf7e8;
+      font-weight:600;
+    }
+    main {
+      max-width:1040px;
+      margin:0 auto;
+      padding:2.5rem 1.5rem 3.5rem;
+    }
+    h1 { font-size:2rem; margin-bottom:1rem; }
+    h2 { font-size:1.4rem; margin-top:2rem; margin-bottom:0.75rem; color:#fdf7e8; }
+    p { line-height:1.7; margin:0.4rem 0; }
+    ul { line-height:1.8; }
+    .btn-primary, .btn-secondary {
+      display:inline-block;
+      padding:0.7rem 1.4rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.95rem;
+      margin-right:1rem;
+    }
+    .btn-primary {
+      background:#e4c88c;
+      color:#050814;
+    }
+    .btn-secondary {
+      border:1px solid #e4c88c;
+      color:#e4c88c;
+    }
+    footer {
+      font-size:0.8rem;
+      color:#b9b5aa;
+      text-align:center;
+      padding:1.2rem 1.5rem;
+      border-top:1px solid rgba(228,200,140,0.18);
+      background:#050814;
+    }
     a { color:#e4c88c; }
+    @media (max-width:720px) {
+      .site-header { flex-wrap:wrap; justify-content:space-between; }
+      .brand-text { display:none; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/logo-site.png" alt="Logo Sacravia">
+        <span class="brand-text">SACRAVIA</span>
+      </a>
+    </div>
+    <nav class="main-nav">
       <a href="index.html">Accueil</a>
       <a href="voyages.html">Voyages</a>
       <a href="a-propos.html" class="active">À propos</a>
@@ -31,50 +127,49 @@
   </header>
 
   <main>
-    <h1>À propos de Sacravia</h1>
-
-    <section aria-labelledby="notre-mission">
-      <h2 id="notre-mission">Notre mission</h2>
+    <section>
+      <h1>À propos de Sacravia</h1>
       <p>
-        Sacravia a pour vocation de créer des chemins où l'on marche vers Dieu, vers les autres et vers soi-même.
-        Nous organisons des voyages spirituels pour petits groupes afin de vivre des temps de prière, d'écoute,
-        de fraternité et de silence.
+        Sacravia naît d'une conviction simple : les chemins de prière et de foi doivent rester accessibles
+        à tous, dans la fraternité, à la mesure humaine.
       </p>
-    </section>
+      <p>
+        Nous organisons des pèlerinages et séjours spirituels pour <strong>petits groupes (2 à 6 personnes)</strong>,
+        en France et en Europe. Chaque voyage est pensé pour être à la fois profond et accessible.
+      </p>
 
-    <section aria-labelledby="pourquoi-sacravia">
-      <h2 id="pourquoi-sacravia">Pourquoi Sacravia&nbsp;?</h2>
-      <p>Parce qu'une simple route peut devenir un lieu de grâce.</p>
-      <p>Parce qu'un déplacement partagé peut transformer un cœur.</p>
-      <p>Parce qu'un petit groupe permet d'avancer vraiment ensemble.</p>
-    </section>
+      <h2>Notre mission</h2>
+      <p>
+        Créer des espaces de prière, de marche, de silence et de fraternité, où chacun peut vivre
+        un chemin spirituel à son rythme, loin des foules et de la frénésie.
+      </p>
 
-    <section aria-labelledby="notre-vision">
-      <h2 id="notre-vision">Notre vision</h2>
+      <h2>Pourquoi Sacravia?</h2>
       <ul>
-        <li><span class="highlight">Simplicité</span> : des voyages accessibles et authentiques.</li>
-        <li><span class="highlight">Profondeur</span> : des étapes spirituelles adaptées à chacun.</li>
-        <li><span class="highlight">Fraternité</span> : avancer à quelques-uns, dans la bienveillance.</li>
-        <li><span class="highlight">Lumière</span> : laisser Dieu éclairer le chemin.</li>
+        <li><strong>Petits groupes</strong> : limité à 6 personnes pour une véritable fraternité.</li>
+        <li><strong>Accompagnement</strong> : nous veillons à la logistique, la sécurité et le confort.</li>
+        <li><strong>Spiritualité authentique</strong> : temps de prière, marche contemplative, échanges.</li>
+        <li><strong>Accessibilité</strong> : pas besoin d'être un grand marcheur ou un expert spirituel.</li>
+        <li><strong>Flexibilité</strong> : nous construisons ensemble votre pèlerinage sur mesure.</li>
       </ul>
-    </section>
 
-    <section aria-labelledby="qui-sommes-nous">
-      <h2 id="qui-sommes-nous">Qui sommes-nous&nbsp;?</h2>
+      <h2>Nos valeurs</h2>
       <p>
-        Sacravia est porté par une personne engagée dans la vie spirituelle, passionnée par les grands lieux de pèlerinage
-        et par l'accompagnement fraternel. Nous travaillons avec des partenaires, des lieux d'accueil, des communautés
-        et des guides spirituels pour permettre à chacun de vivre un temps de retraite ou de pèlerinage dans un climat
-        de confiance et de paix.
+        <strong>Prière, marche et fraternité</strong> : trois piliers qui fondent chaque proposition.
+        <br />
+        La route devient prière quand elle est parcourue ensemble, en silence ou en conversation,
+        ouverts aux autres et à la transcendance.
       </p>
-      <p>
-        Pour en savoir plus ou partager votre histoire, n'hésitez pas à <a href="contact.html">nous écrire</a>.
-      </p>
+
+      <div style="margin-top:2rem;">
+        <a href="voyages.html" class="btn-primary">Découvrir les voyages</a>
+        <a href="contact.html" class="btn-secondary">Nous contacter</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    Sacravia &mdash; Un chemin. Une mission.
+    Sacravia &mdash; Voyages &amp; pèlerinages pour petits groupes.
   </footer>
 </body>
 </html>
