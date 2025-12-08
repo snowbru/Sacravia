@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => { 
-  console.log("Iterdei initialisé.");
+  console.log("Sacravia initialisé.");
 });
