@@ -1,0 +1,21 @@
+# En-têtes de sécurité pour Cloudflare Pages
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  # Protection contre le clickjacking
+  X-Frame-Options: SAMEORIGIN
+  
+  # Empêche les navigateurs de deviner le type MIME
+  X-Content-Type-Options: nosniff
+  
+  # Politique de référence stricte
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Force HTTPS pendant 1 an (31536000 secondes)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # Content Security Policy - Protection contre XSS
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'
+  
+  # Permissions Policy - Contrôle des fonctionnalités du navigateur
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
